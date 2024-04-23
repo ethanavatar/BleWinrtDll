@@ -2,8 +2,6 @@
 // Microsoft Visual C++ generated include file.
 // Used by BleWinrtDll.rc
 
-// Nächste Standardwerte für neue Objekte
-// 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        101

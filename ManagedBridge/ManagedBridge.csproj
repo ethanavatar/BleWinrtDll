@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NativeConfiguration>$(Configuration)</NativeConfiguration>
+    <NativePlatform>x64</NativePlatform>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BleWinrtDll\BleWinrtDll.vcxproj" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\$(NativePlatform)\$(NativeConfiguration)\BleWinrtDll.dll" DestinationFolder="$(OutputPath)" />
+  </Target>
+
+</Project>

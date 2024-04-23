@@ -1,9 +1,7 @@
-// BleWinrtDll.cpp : Definiert die exportierten Funktionen für die DLL-Anwendung.
-//
-
 #include "stdafx.h"
 
 #include "BleWinrtDll.h"
+#include <cstdio>
 
 #pragma comment(lib, "windowsapp")
 
@@ -22,6 +20,10 @@ using namespace Windows::Devices::Bluetooth::GenericAttributeProfile;
 using namespace Windows::Devices::Enumeration;
 
 using namespace Windows::Storage::Streams;
+
+void sayHello() {
+	fprintf(stderr, "Hello from BleWinrtDll\n");
+}
 
 union to_guid
 {
